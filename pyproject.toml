@@ -2,23 +2,28 @@
 name = "fabric-learn"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Andy Miles",email = "akmiles@icloud.com"}
-]
-readme = "README.md"
+authors = [{ name = "Andy Miles", email = "akmiles@icloud.com" }]
 requires-python = ">=3.13"
+readme = "README.md"
 dependencies = [
     "delta-spark (>=3.3.0,<4.0.0)",
-    "pydantic (>=2.10.6,<3.0.0)"
+    "pydantic (>=2.10.6,<3.0.0)",
+    "jupytext (>=1.16.7,<2.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
 ]
 
-[tool.poetry]
-packages = [{include = "fabric_learn", from = "src"}]
+[dependency-groups]
+dev = ["ipykernel>=6.29.5,<7"]
 
+[tool.hatch.build.targets.sdist]
+include = ["src/fabric_learn"]
 
-[tool.poetry.group.dev.dependencies]
-ipykernel = "^6.29.5"
+[tool.hatch.build.targets.wheel]
+include = ["src/fabric_learn"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/fabric_learn" = "fabric_learn"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
