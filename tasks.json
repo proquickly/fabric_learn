@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "run-python": {
+      "command": "python3",
+      "args": ["${file}"]
+    }
+  }
+}

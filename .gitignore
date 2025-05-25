@@ -166,3 +166,6 @@ cython_debug/
 *.csv
 *.pdf
 .Rproj.user
+/logs/
+/.venv/
+

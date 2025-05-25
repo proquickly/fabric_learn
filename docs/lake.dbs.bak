@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="PostgreSQL" database="PostgreSQL" id="PostgreSQL-e0b" >
+	<schema name="public" >
+		<comment><![CDATA[standard public schema]]></comment>
+	</schema>
+	<layout name="Main Diagram" id="Diagram-121c" show_relation="columns" >
+		<callout x="51" y="51" pointer="Round" >
+			<comment><![CDATA[Create new tables by right-clicking the diagram.
+Double-click the table headers, columns, or foreign keys to edit.
+The schema structure will be saved to the design model file.]]></comment>
+		</callout>
+	</layout>
+</project>

@@ -3,13 +3,15 @@ name = "fabric-learn"
 version = "0.1.0"
 description = ""
 authors = [{ name = "Andy Miles", email = "akmiles@icloud.com" }]
-requires-python = ">=3.13"
+requires-python = "==3.12.*"
 readme = "README.md"
 dependencies = [
-    "delta-spark (>=3.3.0,<4.0.0)",
+    "delta-spark==2.2.0",
     "pydantic (>=2.10.6,<3.0.0)",
     "jupytext (>=1.16.7,<2.0.0)",
     "ipykernel>=6.29.5,<7.0.0",
+    "pyodbc>=5.2.0",
+    "pyspark==3.3.2",
 ]
 
 [dependency-groups]
